@@ -1,8 +1,9 @@
-@import 'core/variables';
-@import 'core/reset';
-@import 'components/code';
-@import 'components/links';
-@import 'layout/page';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'pages/index';
+@import "core/mixins";
+@import "core/variables";
+@import "core/reset";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/_section-card-preview";
+@import "layout/_section-design";
+@import "layout/_section-fill";
+@import "layout/_section-share";
