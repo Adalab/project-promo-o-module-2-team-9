@@ -1,14 +1,32 @@
 <section class="card-preview">
-  <input type="reset" value="Volver a empezar" class="reset-btn" />
-  <article class="card">
-    <h3 class="card__name">Nombre Apellido</h3>
-    <p class="card__job">Front-end developer</p>
-    <img class="card__img" />
-    <ul class="card__social">
-      <li class="card__social--icon"><a href="#">Phone</a></li>
-      <li class="card__social--icon"><a href="#">Mail</a></li>
-      <li class="card__social--icon"><a href="#">Linkedin</a></li>
-      <li class="card__social--icon"><a href="#">Github</a></li>
-    </ul>
-  </article>
+  <div class="container">
+    <div class="reset">
+      <i class="far fa-trash-alt reset__icon"></i>
+      <input type="reset" value="Reset" class="reset__btn" />
+    </div>
+    <article class="card">
+      <div class="card__decoration"></div>
+      <div class="card__info">
+        <h3 class="card__info--name">Nombre Apellido</h3>
+        <p class="card__info--job">Front-end developer</p>
+      </div>
+      <img class="card__img" src="./assets/images/placeholder.png" />
+      <ul class="card__social">
+        <li class="card__social--icon">
+          <a href="https://adalab.es/" target="_blank"
+            ><i class="fas fa-mobile-alt"></i
+          ></a>
+        </li>
+        <li class="card__social--icon">
+          <a href="#"><i class="far fa-envelope"></i></a>
+        </li>
+        <li class="card__social--icon">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li class="card__social--icon">
+          <a href="#"><i class="fab fa-github-alt"></i></a>
+        </li>
+      </ul>
+    </article>
+  </div>
 </section>
