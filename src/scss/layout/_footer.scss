@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .footerCopy {
+        font-family: "Open Sans", sans-serif;
+        color: #6b6b6b;
+        margin: 18px 61px 12px 61px;
+        opacity: 0.5;
+    }
+    .imageLogoAdalab {
+        width: 103px;
+        margin-bottom: 20px;
+    }
