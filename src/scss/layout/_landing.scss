@@ -45,15 +45,7 @@
             font-size: 12.8px;
             font-family: "Open Sans", sans-serif;;
         }
-            .fa-object-ungroup {
-                font-size: 22.4px;
-                color: #e17334;
-            }
-            .fa-keyboard {
-                font-size: 22.4px;
-                color: #e17334;
-            }
-            .fa-share-alt {
+            .fa-object-ungroup, .fa-keyboard, .fa-share-alt{
                 font-size: 22.4px;
                 color: #e17334;
             }
@@ -63,7 +55,7 @@
         font-family: "Open Sans", sans-serif;
         font-weight: normal;
         font-size: 16px;
-        padding: 10px 20px 10px 20px;
+        padding: 10px 20px;
         background-color: #438792;
         color: white;
         border-radius: 50px;
