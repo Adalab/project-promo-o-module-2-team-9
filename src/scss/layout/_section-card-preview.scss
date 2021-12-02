@@ -15,26 +15,20 @@
 
 .reset {
   grid-column: 2/3;
-  display: flex;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
   width: 75px;
   height: 30px;
   border: solid 1px white;
   border-radius: 15px;
-  padding: 0 10px;
+  font-size: 12px;
+  font-family: $opensansFont;
+  color: $metalColor;
+  text-transform: uppercase;
   margin-bottom: 20px;
   &__icon {
+    padding-right: 4px;
     font-size: 12px;
     color: #54585a;
-  }
-  &__btn {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    font-size: 12px;
-    font-family: $opensansFont;
-    color: $metalColor;
-    text-transform: uppercase;
-    margin-left: 8px;
   }
 }
 
@@ -75,6 +69,9 @@
   }
   &__img {
     grid-column: 1/4;
+    background-image: url("../images/placeholder.png");
+    background-position: top center;
+    background-size: cover;
     background-color: gainsboro;
     width: 240px;
     height: 200px;
