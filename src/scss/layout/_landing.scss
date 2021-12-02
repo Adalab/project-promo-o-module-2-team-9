@@ -1,5 +1,5 @@
 .headerLanding {
-    height: 84vh;
+    height: 83vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,10 +7,10 @@
     background-color: #f5f5f5;
 }
 
-.image {
-    width: 250px;
-    margin: 95px 35px 35.4px 35px;
-}
+    .image {
+        width: 250px;
+        margin: 95px 35px 35.4px 35px;
+    }
 
     .landingTitle {
         font-size: 19.2px;
@@ -31,7 +31,7 @@
         width: 268px;
         height: 73.8px;
         border-radius: 4px;
-        border: solid 1.6px #e17334;
+        border: solid 1.6px #e1733450;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -45,15 +45,7 @@
             font-size: 12.8px;
             font-family: "Open Sans", sans-serif;;
         }
-            .fa-object-ungroup {
-                font-size: 22.4px;
-                color: #e17334;
-            }
-            .fa-keyboard {
-                font-size: 22.4px;
-                color: #e17334;
-            }
-            .fa-share-alt {
+            .fa-object-ungroup, .fa-keyboard, .fa-share-alt{
                 font-size: 22.4px;
                 color: #e17334;
             }
@@ -63,7 +55,7 @@
         font-family: "Open Sans", sans-serif;
         font-weight: normal;
         font-size: 16px;
-        padding: 10px 20px 10px 20px;
+        padding: 10px 20px;
         background-color: #438792;
         color: white;
         border-radius: 50px;
