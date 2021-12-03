@@ -1,25 +1,26 @@
-<fieldset class="section-design">
-    <div class="container">
-        <h3 class="title">Colores</h3>
-        <div class="options">
-            <label for="optioncolor1">
-                <input type="radio" value="1" name="palette" checked />
-                <div class="palette"></div>
-                <div class="palette"></div>
-                <div class="palette"></div>
+<fieldset class="section-design container">
+    <div class="select hidden-content">
+        <h3 class="select_title">Colores</h3>
+        <div class="select_options">
+            <label for="optioncolor1" class="select__options--palette">
+                <input type="radio" value="1" name="palette" class="select__options--input" checked />
+                <div class="palette palette__cold1"></div>
+                <div class="palette palette__cold2"></div>
+                <div class="palette  palette__cold3"></div>
             </label>
-            <label for="optioncolor2">
-                <input type="radio" value="2" name="palette" />
-                <div class="palette"></div>
-                <div class="palette"></div>
-                <div class="palette"></div>
+            <label for="optioncolor2" class="select__options--palette">
+                <input type="radio" value="2" name="palette" class="select__options--input" />
+                <div class="palette palette__hot1"></div>
+                <div class="palette palette__hot2"></div>
+                <div class="palette palette__hot3"></div>
             </label>
-            <label for="optioncolor3">
-                <input type="radio" value="3" name="palette" />
-                <div class="palette"></div>
-                <div class="palette"></div>
-                <div class="palette"></div>
+            <label for="optioncolor3" class="select__options--palette">
+                <input type="radio" value="3" name="palette" class="select__options--input " />
+                <div class="palette palette__mix1"></div>
+                <div class="palette palette__mix2"></div>
+                <div class="palette palette__mix3"></div>
             </label>
         </div>
+    </div>
     </div>
 </fieldset>
