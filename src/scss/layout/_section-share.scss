@@ -23,3 +23,19 @@
     font-weight: 600;
   }
 }
+
+.btn__card {
+  width: 199px;
+  height: 50px;
+  background-color: $dullOrange;
+  font-family: $opensansFont;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 30px 60px 30px 60px;
+  padding: 13px 18px 13px 17px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
