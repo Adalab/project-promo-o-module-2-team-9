@@ -39,20 +39,33 @@
   font-family: $opensansFont;
   margin-bottom: 7px;
 }
-.form__label--btn {
+
+.form__img {
+  display: flex;
+  align-items: center;
+}
+
+.button__img {
   width: 140px;
   height: 30px;
-  margin: 7px 20px 20px 0;
-  min-width: 206px;
-  align-self: center;
-  font-family: $opensansFont;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
   background-color: $dullOrange;
+  font-family: $opensansFont;
+  color: #fff;
+  font-size: 14px;
+  font-size: 14px;
+  line-height: 1.43;
+  align-self: center;
   border-radius: 3px;
   border: none;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  margin: 7px 20px 20px 0;
+}
+
+.form__button--square {
+  width: 30px;
+  height: 30px;
+  border: #a2deaf 1px solid;
+  margin-top: -15px;
 }
 
 .form__input {
@@ -61,8 +74,14 @@
   border: $hospitalGreen solid 1px;
   margin-bottom: 20px;
   font-family: $opensansFont;
-}
 
+  &::placeholder {
+    font-size: 14px;
+    color: #c5c5c5;
+    font-family: $opensansFont;
+    padding: 3px 0 7px 9px;
+  }
+}
 .github {
   margin-bottom: 30px;
 }

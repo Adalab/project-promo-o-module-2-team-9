@@ -15,12 +15,14 @@
         <label class="form__label" for="position"> Puesto </label>
         <input class="form__input" type="text" id="position" name="job" placeholder="Ej: Front-end unicorn" pattern="^[a-zA-Z]{1-50}$" required />
 
-            <div>
-                <label class="form__label" for="picture"> Imagen de perfil </label>
-                <button class="form__label--btn"> Añadir Imagen </button>
-                <input type="checkbox" id="picture" name="picture" required />
-            </div>
+        <label class="form__label"> Imagen de perfil </label>
+        <div class="form__img">
+            <button class="button__img">Añadir imagen</button>
+            <div class="form__button--square"></div>
+          </div>
 
+    
+        
             <label class="form__label" for="mail"> Email </label>
             <input class="form__input" type="email" id="mail" name="mail" placeholder="Ej: sally-hill@gmail.com"
                 pattern="^[a-zA-Z]{1-50}$" required />
