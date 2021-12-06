@@ -1,11 +1,36 @@
-.section-design {
-    border-style: none;
-    border-bottom: 1px solid $pearlGrey;
+.fieldset__design{
+  margin: 27px 20px 0px;
+  border-style: none;
+  border-bottom: 1px solid $pearlGrey;
 }
 
+.container__design{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  &--icon {
+    display: flex;
+    flex-direction: row;
+  }
+  &--title{
+    flex-grow: 1;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: $opensansFont;
+    font-weight: 600;
+    margin-left: 10px;
+    color: $metalColor;
+    }
+    &--iconArrow{
+    width: 16px;
+    height: 18px;
+    font-size: 18px;
+    }
+  }
 .select{
   width: 100%;
-  padding-top: 20px;
   max-height: 340px;
   margin: 0 auto;
   display: flex;
@@ -17,11 +42,15 @@
     font-weight: 100;
     color: $metalColor;
     text-transform: uppercase;
+    margin-left: 19px;
   }
   &__options {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
     &--input {
+      width: 17px;
+      height: 17px;
       margin-right: 10px;
     }
     &--palette {
