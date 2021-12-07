@@ -7,13 +7,11 @@
 
 .container__fill {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 25px;
 
   &--icon {
     display: flex;
-    flex-direction: row;
   }
   &--title {
     font-size: 18px;
@@ -21,6 +19,14 @@
     text-transform: uppercase;
     font-family: $opensansFont;
     font-weight: 600;
+    color: $metalColor;
+  }
+
+  &--iconArrow {
+    width: 16px;
+    height: 18px;
+    font-size: 18px;
+    color: $metalColor;
   }
 }
 
@@ -45,6 +51,7 @@
 .form__img {
   display: flex;
   align-items: center;
+  margin: 7px 20px 20px 0;
 }
 
 .button__img {
@@ -60,14 +67,13 @@
   border-radius: 3px;
   border: none;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  margin: 7px 20px 20px 0;
 }
 
 .form__button--square {
   width: 30px;
   height: 30px;
   border: #a2deaf 1px solid;
-  margin-top: -15px;
+  margin-left: 20px;
 }
 
 .form__input {
