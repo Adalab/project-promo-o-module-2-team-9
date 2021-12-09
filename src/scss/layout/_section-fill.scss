@@ -1,5 +1,4 @@
 .fieldset__fill {
-  background-color: #fff;
   margin: 10px 20px 0px;
   border: 0;
   border-bottom: 1px solid $pearlGrey;
@@ -20,6 +19,11 @@
     font-family: $opensansFont;
     font-weight: 600;
     color: $metalColor;
+  }
+
+  .fa-keyboard {
+    font-size: 22.4px;
+    color: $dullOrange;
   }
 
   &--iconArrow {
