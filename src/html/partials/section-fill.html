@@ -1,40 +1,42 @@
 <fieldset class="fieldset__fill">
-    <div class="container__fill">
+    <div class="container__fill js_formHeader">
         <div class="container__fill--icon">
-        <i class="far fa-keyboard" alt="Fill"></i>
-        <h3 class="container__fill--title">Rellena</h3>
+            <i class="far fa-keyboard" alt="Fill"></i>
+            <h3 class="container__fill--title">Rellena</h3>
         </div>
-        <i class="fas fa-chevron-up container__fill--iconArrow"></i>
+        <i class="fas fa-chevron-up container__fill--iconArrow js_arrow js_arrowRotate"></i>
     </div>
-    <form class="form" action="#" method="post">
-        <div class="form_container">
-            <label class="form__label" for="name"> Nombre completo </label>
-            <input class="form__input" type="text" id="name" name="name" placeholder="Ej: Amparo Smith"
-                pattern="^[a-zA-Z]{1-50}$" required />
+
+    <div class="form_container js_collapsed js_fillContainer">
+        <label class="form__label" for="name"> Nombre completo </label>
+        <input class="form__input" type="text" id="name" name="name" placeholder="Ej: Amparo Smith"
+            pattern="^[a-zA-Z]{1-50}$" required />
 
         <label class="form__label" for="position"> Puesto </label>
-        <input class="form__input" type="text" id="position" name="job" placeholder="Ej: Front-end unicorn" pattern="^[a-zA-Z]{1-50}$" required />
+        <input class="form__input" type="text" id="position" name="job" placeholder="Ej: Front-end unicorn"
+            pattern="^[a-zA-Z]{1-50}$" required />
 
         <label class="form__label"> Imagen de perfil </label>
         <div class="form__img">
             <button class="button__img">Añadir imagen</button>
             <div class="form__button--square"></div>
-          </div>
+        </div>
 
-            <label class="form__label" for="mail"> Email </label>
-            <input class="form__input" type="email" id="mail" name="mail" placeholder="Ej: amparo-smith@gmail.com"
-                pattern="^[a-zA-Z]{1-50}$" required />
+        <label class="form__label" for="mail"> Email </label>
+        <input class="form__input" type="email" id="mail" name="mail" placeholder="Ej: amparo-smith@gmail.com"
+            pattern="^[a-zA-Z]{1-50}$" required />
 
-            <label class="form__label" for="phone"> Teléfono </label>
-            <input class="form__input" type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55"
-                pattern="^[0-9]{15}$" />
+        <label class="form__label" for="phone"> Teléfono </label>
+        <input class="form__input" type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55"
+            pattern="^[0-9]{15}$" />
 
-            <label class="form__label" for="linkedin"> Linkedin </label>
-            <input class="form__input" type="text" id="linkedin" name="linkedin"
-                placeholder="Ej: linkedin.com/in/amparo.smith" pattern="^[a-zA-Z]{1-50}$" required />
+        <label class="form__label" for="linkedin"> Linkedin </label>
+        <input class="form__input" type="text" id="linkedin" name="linkedin"
+            placeholder="Ej: linkedin.com/in/amparo.smith" pattern="^[a-zA-Z]{1-50}$" required />
 
         <label class="form__label " for="github"> Github </label>
-        <input class="form__input github" type="text" id="github" name="github" placeholder="Ej: @amparo-smith" pattern="^[a-zA-Z]{1-50}$" required />
-</div>
+        <input class="form__input github" type="text" id="github" name="github" placeholder="Ej: @amparo-smith"
+            pattern="^[a-zA-Z]{1-50}$" required />
+    </div>
 
 </fieldset>
