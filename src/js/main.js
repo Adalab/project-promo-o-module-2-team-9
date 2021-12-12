@@ -17,7 +17,7 @@ formHeader.addEventListener('click', handleClickHeader);
 // ICO
 // --------------------------------------------------
 
-const inputData = { };
+const inputData = {};
 inputData.name = document.querySelector('.js_inputName');
 inputData.job = document.querySelector('.js_inputJob');
 // const inputPhone = document.querySelector('.js_inputPhone');
