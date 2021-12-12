@@ -37,7 +37,7 @@ function handleClickHeaderShare() {
 
 shareHeader.addEventListener('click', handleClickHeaderShare);
 
-const inputData = { };
+const inputData = {};
 inputData.name = document.querySelector('.js_inputName');
 inputData.job = document.querySelector('.js_inputJob');
 // const inputPhone = document.querySelector('.js_inputPhone');
@@ -87,6 +87,27 @@ function handleLinkedinLink() {
 }
 
 inputLinkedin.addEventListener('keyup', handleLinkedinLink);
+
+//Iconos -PHONE
+const previewPhone = document.querySelector('.js_previewPhone');
+const inputPhone = document.querySelector('.js_inputPhone');
+
+function handlePhoneLink() {
+  return previewPhone.href = `${inputPhone.value}`;
+}
+
+inputPhone.addEventListener('keyup', handlePhoneLink);
+
+//Iconos - GITHUB
+const previewGithub = document.querySelector('.js_previewGithub');
+const inputGithub = document.querySelector('.js_inputGithub');
+
+function handleGithubLink() {
+  return previewGithub.href = `${inputGithub.value}`;
+}
+
+inputGithub.addEventListener('keyup', handleGithubLink);
+
 
 // const inputPhone = document.querySelector('.js_inputPhone');
 // const inputMail = document.querySelector('.js_inputMail');
