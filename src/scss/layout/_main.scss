@@ -1,16 +1,10 @@
 .card__main {
   @include tablet {
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(to bottom, #f5f5f5, white);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     column-gap: 30px;
-    padding: 0 40px;
-  }
-  @include desktop {
-    grid-template-columns: 2fr 3fr;
-    column-gap: 30px;
-    padding: 0 40px;
+    padding: 20px 40px;
   }
 }
 

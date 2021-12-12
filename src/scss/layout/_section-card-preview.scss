@@ -7,9 +7,11 @@
   @include tablet {
     justify-content: center;
     order: 1;
-    height: 100vh;
+    width: 50%;
     border-radius: 6px;
-    margin: 20px 0;
+  }
+  @include desktop {
+    width: 60%;
   }
 }
 
