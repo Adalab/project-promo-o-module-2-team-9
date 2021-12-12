@@ -37,11 +37,6 @@ function handleClickHeaderShare() {
 
 shareHeader.addEventListener('click', handleClickHeaderShare);
 
-
-// --------------------------------------------------
-// ICO
-// --------------------------------------------------
-
 const inputData = { };
 inputData.name = document.querySelector('.js_inputName');
 inputData.job = document.querySelector('.js_inputJob');
@@ -71,16 +66,27 @@ function printJobPreview() {
 inputData.name.addEventListener('keyup', printNamePreview);
 inputData.job.addEventListener('keyup', printJobPreview);
 
-// Iconos - enlaces
+// Iconos - mail
 
 const previewMail = document.querySelector('.js_previewMail');
 const inputMail = document.querySelector('.js_inputMail');
 
-function handleMailLink () {
+function handleMailLink() {
   return previewMail.href = `mailto:${inputMail.value}`;
 }
 
-inputMail.addEventListener ('keyup', handleMailLink);
+inputMail.addEventListener('keyup', handleMailLink);
+
+// Iconos - linkedin
+
+const previewLinkedin = document.querySelector('.js_previewLinkedin');
+const inputLinkedin = document.querySelector('.js_inputLinkedin');
+
+function handleLinkedinLink() {
+  return previewLinkedin.href = `${inputLinkedin.value}`;
+}
+
+inputLinkedin.addEventListener('keyup', handleLinkedinLink);
 
 // const inputPhone = document.querySelector('.js_inputPhone');
 // const inputMail = document.querySelector('.js_inputMail');
