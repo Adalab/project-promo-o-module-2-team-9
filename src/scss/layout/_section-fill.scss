@@ -43,6 +43,12 @@
   // margin: 0 20px;
   // border-bottom: 1px solid $pearlGrey;
   padding-bottom: 20px;
+  @include tablet {
+    width: 50%;
+  }
+  @include desktop {
+    width: 40%;
+  }
 }
 
 .form__label {
@@ -88,14 +94,22 @@
   border: $hospitalGreen solid 1px;
   margin-bottom: 20px;
   font-family: $opensansFont;
+  padding: 3px 0 7px 9px;
 
   &::placeholder {
     font-size: 14px;
     color: #c5c5c5;
     font-family: $opensansFont;
-    padding: 3px 0 7px 9px;
   }
 }
 .github {
   margin-bottom: 30px;
+}
+
+.js_collapsed {
+  display: none;
+}
+
+.js_arrowRotate {
+  transform: rotate(180deg);
 }

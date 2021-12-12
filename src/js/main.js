@@ -1,21 +1,41 @@
 'use strict';
 
+// Arrow Design
+const arrowDesign = document.querySelector('.js_arrowDesign');
+const designContainer = document.querySelector('.js_designContainer');
+const designHeader = document.querySelector('.js_designHeader');
 
-//Arrow
-const arrowElement = document.querySelector('.js_arrow');
+function handleClickHeaderDesign() {
+  designContainer.classList.toggle('js_collapsed');
+  arrowDesign.classList.toggle('js_arrowRotate');
+}
+
+designHeader.addEventListener('click', handleClickHeaderDesign);
+
+//Arrow Fill
+const arrowFill = document.querySelector('.js_arrowFill');
 const fillContainer = document.querySelector('.js_fillContainer');
 const formHeader = document.querySelector('.js_formHeader');
 
-function handleClickHeader() {
+function handleClickHeaderFill() {
   fillContainer.classList.toggle('js_collapsed');
-  arrowElement.classList.toggle('js_arrowRotate');
+  arrowFill.classList.toggle('js_arrowRotate');
 }
 
-formHeader.addEventListener('click', handleClickHeader);
+formHeader.addEventListener('click', handleClickHeaderFill);
 
-// --------------------------------------------------
-// ICO
-// --------------------------------------------------
+//Arrow share
+
+const arrowShare = document.querySelector('.js_arrowShare');
+const shareContainer = document.querySelector('.js_shareContainer');
+const shareHeader = document.querySelector('.js_shareHeader');
+
+function handleClickHeaderShare() {
+  shareContainer.classList.toggle('js_collapsed');
+  arrowShare.classList.toggle('js_arrowRotate');
+}
+
+shareHeader.addEventListener('click', handleClickHeaderShare);
 
 const inputData = {};
 inputData.name = document.querySelector('.js_inputName');
@@ -45,3 +65,53 @@ function printJobPreview() {
 
 inputData.name.addEventListener('keyup', printNamePreview);
 inputData.job.addEventListener('keyup', printJobPreview);
+
+// Iconos - mail
+
+const previewMail = document.querySelector('.js_previewMail');
+const inputMail = document.querySelector('.js_inputMail');
+
+function handleMailLink() {
+  return previewMail.href = `mailto:${inputMail.value}`;
+}
+
+inputMail.addEventListener('keyup', handleMailLink);
+
+// Iconos - linkedin
+
+const previewLinkedin = document.querySelector('.js_previewLinkedin');
+const inputLinkedin = document.querySelector('.js_inputLinkedin');
+
+function handleLinkedinLink() {
+  return previewLinkedin.href = `${inputLinkedin.value}`;
+}
+
+inputLinkedin.addEventListener('keyup', handleLinkedinLink);
+
+//Iconos -PHONE
+const previewPhone = document.querySelector('.js_previewPhone');
+const inputPhone = document.querySelector('.js_inputPhone');
+
+function handlePhoneLink() {
+  return previewPhone.href = `${inputPhone.value}`;
+}
+
+inputPhone.addEventListener('keyup', handlePhoneLink);
+
+//Iconos - GITHUB
+const previewGithub = document.querySelector('.js_previewGithub');
+const inputGithub = document.querySelector('.js_inputGithub');
+
+function handleGithubLink() {
+  return previewGithub.href = `${inputGithub.value}`;
+}
+
+inputGithub.addEventListener('keyup', handleGithubLink);
+
+
+// const inputPhone = document.querySelector('.js_inputPhone');
+// const inputMail = document.querySelector('.js_inputMail');
+// const inputLinkedin = document.querySelector('.js_inputLinkedin');
+// const inputGithub = document.querySelector('.js_inputGithub');
+
+
