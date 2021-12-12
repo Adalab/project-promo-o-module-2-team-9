@@ -77,11 +77,10 @@ const previewMail = document.querySelector('.js_previewMail');
 const inputMail = document.querySelector('.js_inputMail');
 
 function handleMailLink () {
-  previewMail.href = `mailto:${inputMail.value}`;
+  return previewMail.href = `mailto:${inputMail.value}`;
 }
 
 inputMail.addEventListener ('keyup', handleMailLink);
-
 
 // const inputPhone = document.querySelector('.js_inputPhone');
 // const inputMail = document.querySelector('.js_inputMail');
