@@ -1,17 +1,42 @@
 'use strict';
 
+// Arrow Design
+const arrowDesign = document.querySelector('.js_arrowDesign');
+const designContainer = document.querySelector('.js_designContainer');
+const designHeader = document.querySelector('.js_designHeader');
 
-//Arrow
+function handleClickHeaderDesign() {
+  designContainer.classList.toggle('js_collapsed');
+  arrowDesign.classList.toggle('js_arrowRotate');
+}
+
+designHeader.addEventListener('click', handleClickHeaderDesign);
+
+//Arrow Fill
 const arrowFill = document.querySelector('.js_arrowFill');
 const fillContainer = document.querySelector('.js_fillContainer');
 const formHeader = document.querySelector('.js_formHeader');
 
-function handleClickHeader() {
+function handleClickHeaderFill() {
   fillContainer.classList.toggle('js_collapsed');
   arrowFill.classList.toggle('js_arrowRotate');
 }
 
-formHeader.addEventListener('click', handleClickHeader);
+formHeader.addEventListener('click', handleClickHeaderFill);
+
+//Arrow share
+
+const arrowShare = document.querySelector('.js_arrowShare');
+const shareContainer = document.querySelector('.js_shareContainer');
+const shareHeader = document.querySelector('.js_shareHeader');
+
+function handleClickHeaderShare() {
+  shareContainer.classList.toggle('js_collapsed');
+  arrowShare.classList.toggle('js_arrowRotate');
+}
+
+shareHeader.addEventListener('click', handleClickHeaderShare);
+
 
 // --------------------------------------------------
 // ICO
@@ -45,3 +70,22 @@ function printJobPreview() {
 
 inputData.name.addEventListener('keyup', printNamePreview);
 inputData.job.addEventListener('keyup', printJobPreview);
+
+// Iconos - enlaces
+
+const previewMail = document.querySelector('.js_previewMail');
+const inputMail = document.querySelector('.js_inputMail');
+
+function handleMailLink () {
+  previewMail.href = `mailto:${inputMail.value}`;
+}
+
+inputMail.addEventListener ('keyup', handleMailLink);
+
+
+// const inputPhone = document.querySelector('.js_inputPhone');
+// const inputMail = document.querySelector('.js_inputMail');
+// const inputLinkedin = document.querySelector('.js_inputLinkedin');
+// const inputGithub = document.querySelector('.js_inputGithub');
+
+
