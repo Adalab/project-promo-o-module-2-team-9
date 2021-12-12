@@ -37,11 +37,6 @@ function handleClickHeaderShare() {
 
 shareHeader.addEventListener('click', handleClickHeaderShare);
 
-
-// --------------------------------------------------
-// ICO
-// --------------------------------------------------
-
 const inputData = { };
 inputData.name = document.querySelector('.js_inputName');
 inputData.job = document.querySelector('.js_inputJob');
