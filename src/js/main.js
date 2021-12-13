@@ -40,10 +40,6 @@ shareHeader.addEventListener('click', handleClickHeaderShare);
 const inputData = {};
 inputData.name = document.querySelector('.js_inputName');
 inputData.job = document.querySelector('.js_inputJob');
-// const inputPhone = document.querySelector('.js_inputPhone');
-// const inputMail = document.querySelector('.js_inputMail');
-// const inputLinkedin = document.querySelector('.js_inputLinkedin');
-// const inputGithub = document.querySelector('.js_inputGithub');
 
 const previewName = document.querySelector('.js_previewName');
 const previewJob = document.querySelector('.js_previewJob');
@@ -107,11 +103,5 @@ function handleGithubLink() {
 }
 
 inputGithub.addEventListener('keyup', handleGithubLink);
-
-
-// const inputPhone = document.querySelector('.js_inputPhone');
-// const inputMail = document.querySelector('.js_inputMail');
-// const inputLinkedin = document.querySelector('.js_inputLinkedin');
-// const inputGithub = document.querySelector('.js_inputGithub');
 
 
