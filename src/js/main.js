@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // // Arrow Design
 // const arrowDesign = document.querySelector('.js_arrowDesign');
@@ -37,87 +37,84 @@
 
 // shareHeader.addEventListener('click', handleClickHeaderShare);
 
-// const inputData = {};
-// inputData.name = document.querySelector('.js_inputName');
-// inputData.job = document.querySelector('.js_inputJob');
-
-// const previewName = document.querySelector('.js_previewName');
-// const previewJob = document.querySelector('.js_previewJob');
-
-// function printNamePreview() {
-//   if (inputData.name.value === '') {
-//     previewName.innerHTML = 'Nombre Apellido';
-//   } else {
-//     previewName.innerHTML = inputData.name.value;
-//   }
-// }
-// function printJobPreview() {
-//   if (inputData.job.value === '') {
-//     previewJob.innerHTML = 'Front-end developer';
-//   } else {
-//     previewJob.innerHTML = inputData.job.value;
-//   }
-// }
-
-// inputData.name.addEventListener('keyup', printNamePreview);
-// inputData.job.addEventListener('keyup', printJobPreview);
-
-// // Iconos - mail
-
-// const previewMail = document.querySelector('.js_previewMail');
-// const inputMail = document.querySelector('.js_inputMail');
-
-// function handleMailLink() {
-//   return previewMail.href = `mailto:${inputMail.value}`;
-// }
-
-// inputMail.addEventListener('keyup', handleMailLink);
-
-// // Iconos - linkedin
-
-// const previewLinkedin = document.querySelector('.js_previewLinkedin');
-// const inputLinkedin = document.querySelector('.js_inputLinkedin');
-
-// function handleLinkedinLink() {
-//   return previewLinkedin.href = `${inputLinkedin.value}`;
-// }
-
-// inputLinkedin.addEventListener('keyup', handleLinkedinLink);
-
-// //Iconos -PHONE
-// const previewPhone = document.querySelector('.js_previewPhone');
-// const inputPhone = document.querySelector('.js_inputPhone');
-
-// function handlePhoneLink() {
-//   return previewPhone.href = `${inputPhone.value}`;
-// }
-
-// inputPhone.addEventListener('keyup', handlePhoneLink);
-
-// //Iconos - GITHUB
-// const previewGithub = document.querySelector('.js_previewGithub');
-// const inputGithub = document.querySelector('.js_inputGithub');
-
-// function handleGithubLink() {
-//   return previewGithub.href = `${inputGithub.value}`;
-// }
-
-// inputGithub.addEventListener('keyup', handleGithubLink);
-
-// ==================================================
-// REFACTORIZAR CODIGO
-// ==================================================
-
 // Collapsable Headers
-const designHeader = document.querySelector('.js_designHeader');
-const formHeader = document.querySelector('.js_formHeader');
-const shareHeader = document.querySelector('.js_shareHeader');
+const designHeader = document.querySelector(".js_designHeader");
+const formHeader = document.querySelector(".js_formHeader");
+const shareHeader = document.querySelector(".js_shareHeader");
 
 function handleClickHeader(ev) {
-  ev.currentTarget.nextElementSibling.classList.toggle('js_collapsed');
-  ev.currentTarget.lastElementChild.classList.toggle('js_arrowRotate');
+  ev.currentTarget.nextElementSibling.classList.toggle("js_collapsed");
+  ev.currentTarget.lastElementChild.classList.toggle("js_arrowRotate");
 }
 
-designHeader.addEventListener('click', handleClickHeader);
-formHeader.addEventListener('click', handleClickHeader);
-shareHeader.addEventListener('click', handleClickHeader);
+designHeader.addEventListener("click", handleClickHeader);
+formHeader.addEventListener("click", handleClickHeader);
+shareHeader.addEventListener("click", handleClickHeader);
+
+// Form
+const inputData = {};
+inputData.name = document.querySelector(".js_inputName");
+inputData.job = document.querySelector(".js_inputJob");
+
+const previewName = document.querySelector(".js_previewName");
+const previewJob = document.querySelector(".js_previewJob");
+
+function printNamePreview() {
+  if (inputData.name.value === "") {
+    previewName.innerHTML = "Nombre Apellido";
+  } else {
+    previewName.innerHTML = inputData.name.value;
+  }
+}
+function printJobPreview() {
+  if (inputData.job.value === "") {
+    previewJob.innerHTML = "Front-end developer";
+  } else {
+    previewJob.innerHTML = inputData.job.value;
+  }
+}
+
+inputData.name.addEventListener("keyup", printNamePreview);
+inputData.job.addEventListener("keyup", printJobPreview);
+
+// Iconos - mail
+
+const previewMail = document.querySelector(".js_previewMail");
+const inputMail = document.querySelector(".js_inputMail");
+
+function handleMailLink() {
+  return (previewMail.href = `mailto:${inputMail.value}`);
+}
+
+inputMail.addEventListener("keyup", handleMailLink);
+
+// Iconos - linkedin
+
+const previewLinkedin = document.querySelector(".js_previewLinkedin");
+const inputLinkedin = document.querySelector(".js_inputLinkedin");
+
+function handleLinkedinLink() {
+  return (previewLinkedin.href = `${inputLinkedin.value}`);
+}
+
+inputLinkedin.addEventListener("keyup", handleLinkedinLink);
+
+//Iconos -PHONE
+const previewPhone = document.querySelector(".js_previewPhone");
+const inputPhone = document.querySelector(".js_inputPhone");
+
+function handlePhoneLink() {
+  return (previewPhone.href = `${inputPhone.value}`);
+}
+
+inputPhone.addEventListener("keyup", handlePhoneLink);
+
+//Iconos - GITHUB
+const previewGithub = document.querySelector(".js_previewGithub");
+const inputGithub = document.querySelector(".js_inputGithub");
+
+function handleGithubLink() {
+  return (previewGithub.href = `${inputGithub.value}`);
+}
+
+inputGithub.addEventListener("keyup", handleGithubLink);
