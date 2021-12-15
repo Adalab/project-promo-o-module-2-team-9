@@ -104,7 +104,6 @@
 
 // inputGithub.addEventListener('keyup', handleGithubLink);
 
-
 // ==================================================
 // REFACTORIZAR CODIGO
 // ==================================================
@@ -122,38 +121,3 @@ function handleClickHeader(ev) {
 designHeader.addEventListener('click', handleClickHeader);
 formHeader.addEventListener('click', handleClickHeader);
 shareHeader.addEventListener('click', handleClickHeader);
-
-// Name and Job inputs
-const inputData = {
-  name: document.querySelector('.js_inputName'),
-  job: document.querySelector('.js_inputJob')
-};
-
-const previewItems = {
-  name: document.querySelector('.js_previewName'),
-  job: document.querySelector('.js_previewJob')
-};
-
-// To review
-function printPreview(ev) {
-  if (ev.currentTarget.value === '') {
-    previewItems.name.innerHTML = 'Nombre Apellido';
-  } else {
-    previewItems.name.innerHTML = inputData.name.value;
-  }
-  console.dir(ev.currentTarget);
-  
-}
-
-function printJobPreview() {
-  if (inputData.job.value === '') {
-    previewItems.job.innerHTML = 'Front-end developer';
-  } else {
-    previewItems.job.innerHTML = inputData.job.value;
-  }
-}
-
-inputData.name.addEventListener('keyup', printPreview);
-inputData.job.addEventListener('keyup', printJobPreview);
-
-

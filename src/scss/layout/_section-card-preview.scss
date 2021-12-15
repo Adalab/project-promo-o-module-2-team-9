@@ -103,6 +103,10 @@
       border-radius: 50%;
       padding: 5px;
       margin-right: 10px;
+      &:hover {
+        transform: scale(1.05);
+        transition: transform ease 0.2s;
+      }
     }
   }
 }
