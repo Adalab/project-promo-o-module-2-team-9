@@ -3,14 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid $pearlGrey;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid $pearlGrey;
   }
 }
 .footerCopy {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #6b6b6b;
   margin: 18px 61px 12px 61px;
   opacity: 0.5;
