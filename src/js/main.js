@@ -70,8 +70,34 @@ for (const eachInput of allInputs) {
 }
 
 function handleWriteInput(event) {
-  const userInput = event.currentTarget.name;
+  const userInput = event.currentTarget.id;
   const userValue = event.currentTarget.value;
+
+  if (userInput === 'name') {
+    data.name = userValue;
+  } else if (userInput === 'job') {
+    data.job = userValue;
+  } else if (userInput === 'email') {
+    data.email = userValue;
+  } else if (userInput === 'phone') {
+    data.phone = userValue;
+  } else if (userInput === 'linkedin') {
+    data.linkedin = userValue;
+  } else if (userInput === 'github') {
+    data.github = userValue;
+  }
+  renderPreview();
+}
+
+const previewName = document.querySelector('.js_previewName');
+const previewJob = document.querySelector('.js_previewJob');
+const emailPreview = document.querySelector('.js_previewMail');
+
+function renderPreview() {
+  emailPreview.href = `mailto:${data.email}`;
+
+  previewName.innerHTML = data.name;
+  previewJob.innerHTML = data.job;
 }
 
 /*const inputData = {};
