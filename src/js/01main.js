@@ -35,6 +35,8 @@ const data = {
   photo: '',
 };
 
+console.log(data);
+
 
 for (const eachInput of allInputs) {
   eachInput.addEventListener('keyup', handleWriteInput);
@@ -57,7 +59,7 @@ function handleWriteInput(event) {
   } else if (userInput === 'github') {
     data.github = userValue;
   } else if (userInput === 'photo') {
-    data.photo = fr;
+    data.photo = userValue;
   }
   renderPreview();
 }
