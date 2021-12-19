@@ -52,7 +52,35 @@ formHeader.addEventListener('click', handleClickHeader);
 shareHeader.addEventListener('click', handleClickHeader);
 
 // Form
-const inputData = {};
+const allInputs = document.querySelectorAll('.js_allInputs');
+
+const data = {
+  palette: '',
+  name: '',
+  job: '',
+  email: '',
+  phone: '',
+  linkedin: '',
+  github: '',
+  photo: ''
+}
+
+for (const eachInput of allInputs) {
+  eachInput.addEventListener ('keyup', handleWriteInput);
+}
+
+function handleWriteInput (event) {
+  const userInput = event.currentTarget.name;
+  const userValue = event.currentTarget.value;
+
+  
+
+}
+
+
+
+
+/*const inputData = {};
 inputData.name = document.querySelector('.js_inputName');
 inputData.job = document.querySelector('.js_inputJob');
 
@@ -117,4 +145,4 @@ function handleGithubLink() {
   return (previewGithub.href = `${inputGithub.value}`);
 }
 
-inputGithub.addEventListener('keyup', handleGithubLink);
+inputGithub.addEventListener('keyup', handleGithubLink);*/
