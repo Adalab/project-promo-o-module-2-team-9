@@ -25,7 +25,7 @@ const previewLinkedin = document.querySelector('.js_previewLinkedin');
 const previewGithub = document.querySelector('.js_previewGithub');
 
 const data = {
-  palette: '',
+  palette: 1,
   name: '',
   job: '',
   email: '',
@@ -34,6 +34,7 @@ const data = {
   github: '',
   photo: '',
 };
+
 
 for (const eachInput of allInputs) {
   eachInput.addEventListener('keyup', handleWriteInput);
@@ -55,6 +56,8 @@ function handleWriteInput(event) {
     data.linkedin = userValue;
   } else if (userInput === 'github') {
     data.github = userValue;
+  } else if (userInput === 'photo') {
+    data.photo = fr;
   }
   renderPreview();
 }
@@ -96,3 +99,4 @@ function renderPreview() {
     previewGithub.href = data.github;
   }
 }
+
