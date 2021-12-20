@@ -81,7 +81,7 @@
   }
   &__img {
     grid-column: 1/4;
-    background-image: url("../images/jasonderulo_pic.png");
+    background-image: url('../images/jasonderulo_pic.png');
     background-position: center center;
     background-size: cover;
     background-color: gainsboro;
@@ -117,4 +117,13 @@
 .fa-github-alt {
   font-size: 18px;
   color: $deepGreen;
+}
+
+// Palettes
+.card__decoration__palette2 {
+  background-color: $rustyRed;
+}
+
+.card__decoration__palette3 {
+  background-color: $eggYellow;
 }

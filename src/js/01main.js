@@ -66,3 +66,23 @@ function renderPreview() {
   previewName.innerHTML = data.name;
   previewJob.innerHTML = data.job;
 }
+
+// Paleta de colores
+
+const allPalettes = document.querySelectorAll('.js_palette');
+
+for (const eachPalette of allPalettes) {
+  eachPalette.addEventListener('click', handleClickPalette);
+}
+
+function handleClickPalette(ev) {
+  const paletteValue = parseInt(ev.currentTarget.value);
+
+  if (paletteValue === 1) {
+    console.log('add class css 1');
+  } else if (paletteValue === 2) {
+    console.log('add class css 2');
+  } else if (paletteValue === 3) {
+    console.log('add class css 3');
+  }
+}
