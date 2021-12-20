@@ -120,10 +120,33 @@
 }
 
 // Palettes
+.card__decoration__palette1 {
+  background-color: $deepGreen;
+}
 .card__decoration__palette2 {
   background-color: $rustyRed;
 }
-
 .card__decoration__palette3 {
   background-color: $eggYellow;
+}
+//Color para los bordes
+.social__icon__palette1 {
+  border-color: $deepGreen;
+}
+.social__icon__palette2 {
+  border-color: $rustyRed;
+}
+.social__icon__palette3 {
+  border-color: $eggYellow;
+}
+
+//Color para los iconos
+.icon_image__pallete1 {
+  color: $deepGreen;
+}
+.icon_image__pallete2 {
+  color: $rustyRed;
+}
+.icon_image__pallete3 {
+  color: $eggYellow;
 }
