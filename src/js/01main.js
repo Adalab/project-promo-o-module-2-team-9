@@ -18,7 +18,7 @@ shareHeader.addEventListener('click', handleClickHeader);
 const allInputs = document.querySelectorAll('.js_allInputs');
 
 const data = {
-  palette: '',
+  palette: 1,
   name: '',
   job: '',
   email: '',
@@ -27,6 +27,8 @@ const data = {
   github: '',
   photo: '',
 };
+
+console.log(data);
 
 for (const eachInput of allInputs) {
   eachInput.addEventListener('keyup', handleWriteInput);
@@ -48,6 +50,8 @@ function handleWriteInput(event) {
     data.linkedin = userValue;
   } else if (userInput === 'github') {
     data.github = userValue;
+  } else if (userInput === 'photo') {
+    data.photo = userValue;
   }
   renderPreview();
 }

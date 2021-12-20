@@ -79,6 +79,8 @@
   border-radius: 3px;
   border: none;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  text-align: center;
+  padding: 5px;
 }
 
 .form__button--square {
@@ -86,6 +88,8 @@
   height: 30px;
   border: #a2deaf 1px solid;
   margin-left: 20px;
+  background-size: cover;
+  background-position: center center;
 }
 
 .form__input {
@@ -112,4 +116,10 @@
 
 .js_arrowRotate {
   transform: rotate(180deg);
+}
+
+//Para ocultar el input
+
+.hidden{
+  display: none;
 }
