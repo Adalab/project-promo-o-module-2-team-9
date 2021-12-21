@@ -167,3 +167,19 @@ function modificaIconsImages(clase) {
     image.classList.add(clase);
   }
 }
+
+//Funcion para sacar el boton de twitter
+
+const createBtn = document.querySelector('.js_create_button');
+const fieldsetShare = document.querySelector('.js_fieldset__share');
+const cardURL = document.querySelector('.js_cardURL');
+
+function handleClickCreate(event) {
+  event.preventDefault();
+  if (fieldsetShare.classList.contains('js_collapsed')) {
+    fieldsetShare.classList.remove('js_collapsed');
+  }
+  console.log(cardURL);
+}
+
+createBtn.addEventListener('click', handleClickCreate);
