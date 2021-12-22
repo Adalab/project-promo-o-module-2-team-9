@@ -33,7 +33,7 @@ const data = {
   photo: '',
 };
 
-console.log(data);
+//console.log(data);
 
 for (const eachInput of allInputs) {
   eachInput.addEventListener('keyup', handleWriteInput);
