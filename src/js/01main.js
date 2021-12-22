@@ -40,10 +40,13 @@ for (const eachInput of allInputs) {
 }
 
 function handleWriteInput(event) {
+
   const userInput = event.currentTarget.id;
   const userValue = event.currentTarget.value;
 
   if (userInput === 'name') {
+    console.log(data.name);
+
     data.name = userValue;
   } else if (userInput === 'job') {
     data.job = userValue;
@@ -63,7 +66,7 @@ function handleWriteInput(event) {
 
 const previewName = document.querySelector('.js_previewName');
 const previewJob = document.querySelector('.js_previewJob');
-const emailPreview = document.querySelector('.js_previewMail');
+const emailPreview = document.querySelector('.js_previewEmail');
 
 function renderPreview() {
   emailPreview.href = `mailto:${data.email}`;
@@ -72,7 +75,7 @@ function renderPreview() {
   previewJob.innerHTML = data.job;
 }
 
-// Paleta de colores
+//Paleta de colores
 
 const allPalettes = document.querySelectorAll('.js_palette');
 
@@ -127,10 +130,39 @@ function modificaSocialIcons(clase) {
   }
 }
 
-//Funcion para los colores de los iconos 
+//Funcion para los colores de los iconos
 
 function modificaIconsImages(clase) {
   for (const image of imageIcons) {
     image.classList.add(clase);
   }
 }
+
+//Reset
+
+const buttonReset = document.querySelector('.js_reset');
+
+function handleResetForm() {
+  //Inicializar el objeto data
+  data.palette = 1;
+  data.name = '';
+  data.job = '';
+  data.email = '';
+  data.phone = '';
+  data.linkedin = '';
+  data.github = '';
+  data.photo = '';
+
+  for (const eachInput of allInputs) {
+    eachInput.value = '';
+  }
+}
+
+buttonReset.addEventListener('click', handleResetForm);
+
+//Para el collapse de linkedin xD
+
+const shareCollapse = document.querySelector('.js_shareCollapse');
+
+
+
