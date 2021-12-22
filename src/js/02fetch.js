@@ -4,6 +4,7 @@
 const shareCollapse = document.querySelector('.js_shareCollapse');
 //Boton crear tarjeta
 const createButton = document.querySelector('.js_create_button');
+//Bo
 
 function handleCreateCard(event) {
   event.preventDefault();
@@ -15,7 +16,7 @@ function handleCreateCard(event) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(shareCollapse);
+      console.log(data);
       if (shareCollapse.classList.contains('js_collapsed')) {
         shareCollapse.classList.remove('js_collapsed');
         createButton.style.backgroundColor = 'gray';
