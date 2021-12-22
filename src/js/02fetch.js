@@ -1,7 +1,5 @@
 'use strict';
 
-//Para el collapse de linkedin xD
-const shareCollapse = document.querySelector('.js_shareCollapse');
 //Boton crear tarjeta
 const createButton = document.querySelector('.js_create_button');
 //Boton para recoger donde aparece el fetch en html
@@ -27,5 +25,6 @@ function handleCreateCard(event) {
 }
 
 createButton.addEventListener('click', handleCreateCard);
+
 
 

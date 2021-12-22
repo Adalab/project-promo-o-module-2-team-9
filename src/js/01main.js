@@ -11,6 +11,11 @@ const borderIcons = document.querySelectorAll('.js_icon_border');
 const imageIcons = document.querySelectorAll('.js_icon_image');
 const previeNameColor = document.querySelector('.js_previeNameColor');
 
+//Para el collapse de linkedin xD
+const shareCollapse = document.querySelector('.js_shareCollapse');
+
+
+
 function handleClickHeader(event) {
   event.currentTarget.nextElementSibling.classList.toggle('js_collapsed');
   event.currentTarget.lastElementChild.classList.toggle('js_arrowRotate');
@@ -186,13 +191,15 @@ function modificaIconsImages(clase) {
 //Funcion para sacar el boton de twitter
 
 const createBtn = document.querySelector('.js_create_button');
-const fieldsetShare = document.querySelector('.js_fieldset__share');
+//const fieldsetShare = document.querySelector('.js_fieldset__share');
 const cardURL = document.querySelector('.js_cardURL');
+
+
 
 function handleClickCreate(event) {
   event.preventDefault();
-  if (fieldsetShare.classList.contains('js_collapsed')) {
-    fieldsetShare.classList.remove('js_collapsed');
+  if (shareCollapse.classList.contains('js_collapsed')) {
+    shareCollapse.classList.remove('js_collapsed');
   }
   console.log(cardURL);
 }
@@ -223,4 +230,5 @@ function handleResetForm() {
 }
 
 buttonReset.addEventListener('click', handleResetForm);
+
 
