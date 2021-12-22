@@ -9,6 +9,10 @@ const shareHeader = document.querySelector('.js_shareHeader');
 const cardDecoration = document.querySelector('.card__decoration');
 const borderIcons = document.querySelectorAll('.js_icon_border');
 const imageIcons = document.querySelectorAll('.js_icon_image');
+const previeNameColor = document.querySelector('.js_previeNameColor');
+
+//Para el collapse de linkedin xD
+const shareCollapse = document.querySelector('.js_shareCollapse');
 
 function handleClickHeader(event) {
   event.currentTarget.nextElementSibling.classList.toggle('js_collapsed');
@@ -93,21 +97,22 @@ function renderPreview() {
     previewPhone.href = data.phone;
   }
 
-  if (data.name === '') {
+  if (data.linkedin === '') {
     previewLinkedin.href = '';
   } else {
     previewLinkedin.href = data.linkedin;
   }
 
-  if (data.name === '') {
-    previewGithub.href = 'Front-end developer';
+  if (data.github === '') {
+    previewGithub.href = '';
   } else {
     previewGithub.href = data.github;
   }
 }
 
-// Paleta de colores
+//Paleta de colores
 
+//Para lso iconos
 const allPalettes = document.querySelectorAll('.js_palette');
 
 for (const eachPalette of allPalettes) {
@@ -122,23 +127,33 @@ function handleClickPalette(ev) {
 
   if (paletteValue === 1) {
     cardDecoration.classList.add('card__decoration__palette1');
+    modificaNameAndLastName('namePreview__pallete1');
     modificaSocialIcons('social__icon__palette1');
     modificaIconsImages('icon_image__pallete1');
   } else if (paletteValue === 2) {
     cardDecoration.classList.add('card__decoration__palette2');
+    modificaNameAndLastName('namePreview__pallete2');
     modificaSocialIcons('social__icon__palette2');
     modificaIconsImages('icon_image__pallete2');
   } else if (paletteValue === 3) {
     cardDecoration.classList.add('card__decoration__palette3');
+    modificaNameAndLastName('namePreview__pallete3');
     modificaSocialIcons('social__icon__palette3');
     modificaIconsImages('icon_image__pallete3');
   }
 }
 //Clases que le dan color al div, es sólo un elemento
 function limpiaClases() {
+  //Para la barrita
   cardDecoration.classList.remove('card__decoration__palette1');
   cardDecoration.classList.remove('card__decoration__palette2');
   cardDecoration.classList.remove('card__decoration__palette3');
+
+  //Para eliminar las clases del nombrePreview
+  previeNameColor.classList.remove('namePreview__pallete1');
+  previeNameColor.classList.remove('namePreview__pallete2');
+  previeNameColor.classList.remove('namePreview__pallete3');
+
   //Borde de los iconos
   for (const icon of borderIcons) {
     icon.classList.remove('social__icon__palette1');
@@ -171,17 +186,49 @@ function modificaIconsImages(clase) {
 //Funcion para sacar el boton de twitter
 
 const createBtn = document.querySelector('.js_create_button');
-const fieldsetShare = document.querySelector('.js_fieldset__share');
+//const fieldsetShare = document.querySelector('.js_fieldset__share');
 const cardURL = document.querySelector('.js_cardURL');
 
-function handleClickCreate(event) {
-  event.preventDefault();
-  if (fieldsetShare.classList.contains('js_collapsed')) {
-    fieldsetShare.classList.remove('js_collapsed');
-  }
-  console.log(cardURL);
+// function handleClickCreate(event) {
+//   event.preventDefault();
+//   if (shareCollapse.classList.contains('js_collapsed')) {
+//     shareCollapse.classList.remove('js_collapsed');
+//   }
+//   console.log(cardURL);
+// }
+
+// createBtn.addEventListener('click', handleClickCreate);
+
+function modificaNameAndLastName(clase) {
+  previeNameColor.classList.add(clase);
 }
 
-createBtn.addEventListener('click', handleClickCreate);
+//Reset
 
-console.log(cardURL);
+const buttonReset = document.querySelector('.js_reset');
+
+function handleResetForm() {
+  //Inicializar el objeto data
+  data.palette = 1;
+  data.name = '';
+  data.job = '';
+  data.email = '';
+  data.phone = '';
+  data.linkedin = '';
+  data.github = '';
+  data.photo = '';
+
+  // Reset card preview
+  previewName.innerHTML = 'Nombre Apellido';
+  previewJob.innerHTML = 'Front-end developer';
+  previewEmail.href = '';
+  previewPhone.href = '';
+  previewLinkedin.href = '';
+  previewGithub.href = '';
+
+  for (const eachInput of allInputs) {
+    eachInput.value = '';
+  }
+}
+
+buttonReset.addEventListener('click', handleResetForm);
