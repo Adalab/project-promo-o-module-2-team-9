@@ -183,3 +183,5 @@ function handleClickCreate(event) {
 }
 
 createBtn.addEventListener('click', handleClickCreate);
+
+console.log(cardURL);
