@@ -81,7 +81,7 @@
   }
   &__img {
     grid-column: 1/4;
-    background-image: url('../images/jasonderulo_pic.png');
+    background-image: url("../images/jasonderulo_pic.png");
     background-position: center center;
     background-size: cover;
     background-color: gainsboro;
@@ -121,7 +121,7 @@
 
 // Palettes
 .card__decoration__palette1 {
-  background-color: $deepGreen;
+  background-color: $dirtyBlue;
 }
 .card__decoration__palette2 {
   background-color: $rustyRed;
@@ -131,13 +131,13 @@
 }
 //Color para los bordes
 .social__icon__palette1 {
-  border-color: $deepGreen;
+  border-color: $hospitalGreen;
 }
 .social__icon__palette2 {
-  border-color: $rustyRed;
+  border-color: $tomatoRed;
 }
 .social__icon__palette3 {
-  border-color: $eggYellow;
+  border-color: $lightGreyBlue;
 }
 
 //Color para los iconos
@@ -148,16 +148,16 @@
   color: $rustyRed;
 }
 .icon_image__pallete3 {
-  color: $eggYellow;
+  color: $blackboard;
 }
 
 //color Nombre apellido
-.namePreview__pallete1{
-  color: pink;
+.namePreview__pallete1 {
+  color: $deepGreen;
 }
-.namePreview__pallete2{
-  color: red;
+.namePreview__pallete2 {
+  color: $deepRed;
 }
-.namePreview__pallete3{
-  color: yellow;
+.namePreview__pallete3 {
+  color: $blackboard;
 }
