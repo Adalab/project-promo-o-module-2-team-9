@@ -17,11 +17,7 @@
 
 <body>
   <header class="header__card">
-    <img
-      class="header__card--logo"
-      src="./assets/images/logo-awesome-profile-cards.svg"
-      alt="logo-awesome"
-    />
+    <img class="header__card--logo" src="./assets/images/logo-awesome-profile-cards.svg" alt="logo-awesome" />
   </header>
 
   <main class="card__main">
@@ -56,163 +52,120 @@
       </div>
     </section>
     <form action="" method="post" class="form">
-        <fieldset class="fieldset__design">
-          <div class="container__design js_designHeader">
-            <i class="far fa-object-ungroup container__design--icon" alt="design"></i>
-            <h3 class="container__design--title">diseña</h3>
-            <i class="fas fa-chevron-up container__design--iconArrow js_arrowDesign"></i>
+      <fieldset class="fieldset__design">
+        <div class="container__design js_designHeader">
+          <i class="far fa-object-ungroup container__design--icon" alt="design"></i>
+          <h3 class="container__design--title">diseña</h3>
+          <i class="fas fa-chevron-up container__design--iconArrow js_arrowDesign"></i>
+        </div>
+        <div class="select js_designContainer ">
+          <h3 class="select__title">Colores</h3>
+          <div class="select__options">
+            <label for="optioncolor1" class="select__options--palette">
+              <input type="radio" value="1" name="palette" class="select__options--input" checked />
+              <div class="palette palette__cold1"></div>
+              <div class="palette palette__cold2"></div>
+              <div class="palette palette__cold3"></div>
+            </label>
+            <label for="optioncolor2" class="select__options--palette">
+              <input type="radio" value="2" name="palette" class="select__options--input" />
+              <div class="palette palette__hot1"></div>
+              <div class="palette palette__hot2"></div>
+              <div class="palette palette__hot3"></div>
+            </label>
+            <label for="optioncolor3" class="select__options--palette">
+              <input type="radio" value="3" name="palette" class="select__options--input" />
+              <div class="palette palette__mix1"></div>
+              <div class="palette palette__mix2"></div>
+              <div class="palette palette__mix3"></div>
+            </label>
           </div>
-          <div class="select js_designContainer ">
-            <h3 class="select__title">Colores</h3>
-            <div class="select__options">
-              <label for="optioncolor1" class="select__options--palette">
-                <input type="radio" value="1" name="palette" class="select__options--input" checked />
-                <div class="palette palette__cold1"></div>
-                <div class="palette palette__cold2"></div>
-                <div class="palette palette__cold3"></div>
-              </label>
-              <label for="optioncolor2" class="select__options--palette">
-                <input type="radio" value="2" name="palette" class="select__options--input" />
-                <div class="palette palette__hot1"></div>
-                <div class="palette palette__hot2"></div>
-                <div class="palette palette__hot3"></div>
-              </label>
-              <label for="optioncolor3" class="select__options--palette">
-                <input type="radio" value="3" name="palette" class="select__options--input" />
-                <div class="palette palette__mix1"></div>
-                <div class="palette palette__mix2"></div>
-                <div class="palette palette__mix3"></div>
-              </label>
-            </div>
+        </div>
+      </fieldset>
+      <fieldset class="fieldset__fill">
+        <div class="container__fill js_formHeader">
+          <div class="container__fill--icon">
+            <i class="far fa-keyboard" alt="Fill"></i>
+            <h3 class="container__fill--title">Rellena</h3>
           </div>
-        </fieldset>
-        <fieldset class="fieldset__fill">
-          <div class="container__fill js_formHeader">
-            <div class="container__fill--icon">
-              <i class="far fa-keyboard" alt="Fill"></i>
-              <h3 class="container__fill--title">Rellena</h3>
-            </div>
-            <i
-              class="
+          <i class="
                 fas
                 fa-chevron-up
                 container__fill--iconArrow
                 js_arrowFill js_arrowRotate
-              "
-            ></i>
+              "></i>
+        </div>
+
+        <div class="form_container js_collapsed js_fillContainer">
+          <label class="form__label" for="name"> Nombre completo </label>
+          <input class="form__input js_inputName" type="text" id="name" name="name" placeholder="Ej: Amparo Smith"
+            pattern="^[a-zA-Z]{1-50}$" required />
+
+          <label class="form__label" for="position"> Puesto </label>
+          <input class="form__input js_inputJob" type="text" id="position" name="job"
+            placeholder="Ej: Front-end unicorn" pattern="^[a-zA-Z]{1-50}$" required />
+
+          <label class="form__label"> Imagen de perfil </label>
+          <div class="form__img">
+            <button class="button__img">Añadir imagen</button>
+            <div class="form__button--square"></div>
           </div>
 
-          <div class="form_container js_collapsed js_fillContainer">
-            <label class="form__label" for="name"> Nombre completo </label>
-            <input
-              class="form__input js_inputName"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Ej: Amparo Smith"
-              pattern="^[a-zA-Z]{1-50}$"
-              required
-            />
+          <label class="form__label" for="mail"> Email </label>
+          <input class="form__input js_inputMail" type="email" id="mail" name="mail"
+            placeholder="Ej: amparo-smith@gmail.com" pattern="^[a-zA-Z]{1-50}$" required />
 
-            <label class="form__label" for="position"> Puesto </label>
-            <input
-              class="form__input js_inputJob"
-              type="text"
-              id="position"
-              name="job"
-              placeholder="Ej: Front-end unicorn"
-              pattern="^[a-zA-Z]{1-50}$"
-              required
-            />
+          <label class="form__label" for="phone"> Teléfono </label>
+          <input class="form__input js_inputPhone" type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55"
+            pattern="^[0-9]{15}$" />
 
-            <label class="form__label"> Imagen de perfil </label>
-            <div class="form__img">
-              <button class="button__img">Añadir imagen</button>
-              <div class="form__button--square"></div>
-            </div>
+          <label class="form__label" for="linkedin"> Linkedin </label>
+          <input class="form__input js_inputLinkedin" type="text" id="linkedin" name="linkedin"
+            placeholder="Ej: linkedin.com/in/amparo.smith" pattern="^[a-zA-Z]{1-50}$" required />
 
-            <label class="form__label" for="mail"> Email </label>
-            <input
-              class="form__input js_inputMail"
-              type="email"
-              id="mail"
-              name="mail"
-              placeholder="Ej: amparo-smith@gmail.com"
-              pattern="^[a-zA-Z]{1-50}$"
-              required
-            />
+          <label class="form__label" for="github"> Github </label>
+          <input class="form__input github js_inputGithub" type="text" id="github" name="github"
+            placeholder="Ej: @amparo-smith" pattern="^[a-zA-Z]{1-50}$" required />
+        </div>
+      </fieldset>
 
-            <label class="form__label" for="phone"> Teléfono </label>
-            <input
-              class="form__input js_inputPhone"
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Ej: 555-55-55-55"
-              pattern="^[0-9]{15}$"
-            />
-
-            <label class="form__label" for="linkedin"> Linkedin </label>
-            <input
-              class="form__input js_inputLinkedin"
-              type="text"
-              id="linkedin"
-              name="linkedin"
-              placeholder="Ej: linkedin.com/in/amparo.smith"
-              pattern="^[a-zA-Z]{1-50}$"
-              required
-            />
-
-            <label class="form__label" for="github"> Github </label>
-            <input
-              class="form__input github js_inputGithub"
-              type="text"
-              id="github"
-              name="github"
-              placeholder="Ej: @amparo-smith"
-              pattern="^[a-zA-Z]{1-50}$"
-              required
-            />
+      <fieldset class="fieldset__share ">
+        <div class="container__share js_shareHeader">
+          <div class="container__share--icon">
+            <i class="fas fa-share-alt" alt="Share"></i>
+            <h3 class="container__share--title">Comparte</h3>
           </div>
-        </fieldset>
-
-        <fieldset class="fieldset__share ">
-            <div class="container__share js_shareHeader">
-                <div class="container__share--icon">
-                    <i class="fas fa-share-alt" alt="Share"></i>
-                    <h3 class="container__share--title">Comparte</h3>
-                </div>
-                <i class="fas fa-chevron-up js_arrowShare container__share--iconArrow
+          <i class="fas fa-chevron-up js_arrowShare container__share--iconArrow
                 arrowShare js_arrowRotate"></i>
-            </div>
-            <div class="js_collapsed js_shareContainer">
-                <div class="container__button js_collapsed">
-                    <button class="container__button__btn--card">
-                        <i class="far fa-address-card container__button--icon"></i>crear tarjeta
-                    </button>
-                </div>
-        </fieldset>
-        <fieldset class="fieldset__share js_collapsed">
-            <div class="container__created">
-                <h4 class="container__created--title">La tarjeta ha sido creada:</h4>
-                <a href="" class="container__created--link"> https://awesome-profile-card.com?id=A458876555001</a>
-                <button type="submit" class="btn--twitter">
-                    <i class="fab fa-twitter twitter-icon"></i>Compartir en twitter
-                </button>
-            </div>
-        </fieldset>
+        </div>
+        <div class="js_collapsed js_shareContainer">
+          <div class="container__button js_collapsed">
+            <button class="container__button__btn--card">
+              <i class="far fa-address-card container__button--icon"></i>crear tarjeta
+            </button>
+          </div>
+      </fieldset>
+      <fieldset class="fieldset__share js_collapsed">
+        <div class="container__created">
+          <h4 class="container__created--title">La tarjeta ha sido creada:</h4>
+          <a href="" class="container__created--link"> https://awesome-profile-card.com?id=A458876555001</a>
+          <button type="submit" class="btn--twitter">
+            <i class="fab fa-twitter twitter-icon"></i>Compartir en twitter
+          </button>
+        </div>
+      </fieldset>
     </form>
   </main>
 
   <footer class="footer">
 
-      <h5 class="footerCopy">Awesome profile-cards
-          &copy; 2021</h5>
+    <h5 class="footerCopy">Awesome profile-cards
+      &copy; 2021</h5>
 
-      <a href="https://adalab.es" target="_blank">
-          <img class="imageLogoAdalab" src="./assets/images/logo-adalab.png" alt="logo" title="logo">
-      </a>
-      
+    <a href="https://adalab.es" target="_blank">
+      <img class="imageLogoAdalab" src="./assets/images/logo-adalab.png" alt="logo" title="logo">
+    </a>
+
   </footer>
   <script src="./assets/js/main.js"></script>
 </body>
