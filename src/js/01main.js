@@ -9,6 +9,7 @@ const shareHeader = document.querySelector('.js_shareHeader');
 const cardDecoration = document.querySelector('.card__decoration');
 const borderIcons = document.querySelectorAll('.js_icon_border');
 const imageIcons = document.querySelectorAll('.js_icon_image');
+const previeNameColor = document.querySelector('.js_previeNameColor');
 
 function handleClickHeader(event) {
   event.currentTarget.nextElementSibling.classList.toggle('js_collapsed');
@@ -77,6 +78,7 @@ function renderPreview() {
 
 //Paleta de colores
 
+//Para lso iconos
 const allPalettes = document.querySelectorAll('.js_palette');
 
 for (const eachPalette of allPalettes) {
@@ -91,23 +93,33 @@ function handleClickPalette(ev) {
 
   if (paletteValue === 1) {
     cardDecoration.classList.add('card__decoration__palette1');
+    modificaNameAndLastName('namePreview__pallete1');
     modificaSocialIcons('social__icon__palette1');
     modificaIconsImages('icon_image__pallete1');
   } else if (paletteValue === 2) {
     cardDecoration.classList.add('card__decoration__palette2');
+    modificaNameAndLastName('namePreview__pallete2');
     modificaSocialIcons('social__icon__palette2');
     modificaIconsImages('icon_image__pallete2');
   } else if (paletteValue === 3) {
     cardDecoration.classList.add('card__decoration__palette3');
+    modificaNameAndLastName('namePreview__pallete3');
     modificaSocialIcons('social__icon__palette3');
     modificaIconsImages('icon_image__pallete3');
   }
 }
 //Clases que le dan color al div, es sólo un elemento
 function limpiaClases() {
+  //Para la barrita
   cardDecoration.classList.remove('card__decoration__palette1');
   cardDecoration.classList.remove('card__decoration__palette2');
   cardDecoration.classList.remove('card__decoration__palette3');
+
+  //Para eliminar las clases del nombrePreview
+  previeNameColor.classList.remove('namePreview__pallete1');
+  previeNameColor.classList.remove('namePreview__pallete2');
+  previeNameColor.classList.remove('namePreview__pallete3');
+
   //Borde de los iconos
   for (const icon of borderIcons) {
     icon.classList.remove('social__icon__palette1');
@@ -136,6 +148,10 @@ function modificaIconsImages(clase) {
   for (const image of imageIcons) {
     image.classList.add(clase);
   }
+}
+
+function modificaNameAndLastName(clase) {
+  previeNameColor.classList.add(clase);
 }
 
 //Reset
