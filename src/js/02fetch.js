@@ -1,5 +1,8 @@
 'use strict';
 
+//Para el collapse de linkedin xD
+const shareCollapse = document.querySelector('.js_shareCollapse');
+//Boton crear tarjeta
 const createButton = document.querySelector('.js_create_button');
 
 function handleCreateCard(event) {
@@ -12,8 +15,14 @@ function handleCreateCard(event) {
   })
     .then((response) => response.json())
     .then((data) => {
-
+      console.log(shareCollapse);
+      if (shareCollapse.classList.contains('js_collapsed')) {
+        shareCollapse.classList.remove('js_collapsed');
+        createButton.style.backgroundColor = 'gray';
+      }
     });
 }
 
 createButton.addEventListener('click', handleCreateCard);
+
+

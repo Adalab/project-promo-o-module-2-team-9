@@ -160,9 +160,7 @@ function handleResetForm() {
 
 buttonReset.addEventListener('click', handleResetForm);
 
-//Para el collapse de linkedin xD
 
-const shareCollapse = document.querySelector('.js_shareCollapse');
 
 
 
