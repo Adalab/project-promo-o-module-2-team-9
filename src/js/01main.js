@@ -11,6 +11,9 @@ const borderIcons = document.querySelectorAll('.js_icon_border');
 const imageIcons = document.querySelectorAll('.js_icon_image');
 const previeNameColor = document.querySelector('.js_previeNameColor');
 
+//Para el collapse de linkedin xD
+const shareCollapse = document.querySelector('.js_shareCollapse');
+
 function handleClickHeader(event) {
   event.currentTarget.nextElementSibling.classList.toggle('js_collapsed');
   event.currentTarget.lastElementChild.classList.toggle('js_arrowRotate');
@@ -34,20 +37,17 @@ const data = {
   photo: '',
 };
 
-console.log(data);
+// console.log(data);
 
 for (const eachInput of allInputs) {
   eachInput.addEventListener('keyup', handleWriteInput);
 }
 
 function handleWriteInput(event) {
-
   const userInput = event.currentTarget.id;
   const userValue = event.currentTarget.value;
 
   if (userInput === 'name') {
-    console.log(data.name);
-
     data.name = userValue;
   } else if (userInput === 'job') {
     data.job = userValue;
@@ -72,34 +72,39 @@ const previewPhone = document.querySelector('.js_previewPhone');
 const previewLinkedin = document.querySelector('.js_previewLinkedin');
 const previewGithub = document.querySelector('.js_previewGithub');
 
-
 function renderPreview() {
   if (data.name === '') {
     previewName.innerHTML = 'Nombre Apellido';
   } else {
     previewName.innerHTML = data.name;
-  }  if (data.job === '') {
+  }
+
+  if (data.job === '') {
     previewJob.innerHTML = 'Front-end developer';
   } else {
     previewJob.innerHTML = data.job;
-  } if (data.email === '') {
+  }
+
+  if (data.email === '') {
     previewEmail.href = '';
   } else {
     previewEmail.href = `mailto:${data.email}`;
-  }   if (data.phone === '') {
+  }
+
+  if (data.phone === '') {
     previewPhone.href = '';
   } else {
     previewPhone.href = data.phone;
   }
 
-  if (data.name === '') {
+  if (data.linkedin === '') {
     previewLinkedin.href = '';
   } else {
     previewLinkedin.href = data.linkedin;
   }
 
-  if (data.name === '') {
-    previewGithub.href = 'Front-end developer';
+  if (data.github === '') {
+    previewGithub.href = '';
   } else {
     previewGithub.href = data.github;
   }
@@ -163,7 +168,6 @@ function limpiaClases() {
     image.classList.remove('icon_image__pallete2');
     image.classList.remove('icon_image__pallete3');
   }
-
 }
 
 function modificaSocialIcons(clase) {
@@ -180,6 +184,22 @@ function modificaIconsImages(clase) {
     image.classList.add(clase);
   }
 }
+
+//Funcion para sacar el boton de twitter
+
+const createBtn = document.querySelector('.js_create_button');
+//const fieldsetShare = document.querySelector('.js_fieldset__share');
+const cardURL = document.querySelector('.js_cardURL');
+
+// function handleClickCreate(event) {
+//   event.preventDefault();
+//   if (shareCollapse.classList.contains('js_collapsed')) {
+//     shareCollapse.classList.remove('js_collapsed');
+//   }
+//   console.log(cardURL);
+// }
+
+// createBtn.addEventListener('click', handleClickCreate);
 
 function modificaNameAndLastName(clase) {
   previeNameColor.classList.add(clase);
@@ -199,6 +219,14 @@ function handleResetForm() {
   data.linkedin = '';
   data.github = '';
   data.photo = '';
+
+  // Reset card preview
+  previewName.innerHTML = 'Nombre Apellido';
+  previewJob.innerHTML = 'Front-end developer';
+  previewEmail.href = '';
+  previewPhone.href = '';
+  previewLinkedin.href = '';
+  previewGithub.href = '';
 
   for (const eachInput of allInputs) {
     eachInput.value = '';
