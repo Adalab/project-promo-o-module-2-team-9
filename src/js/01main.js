@@ -9,6 +9,10 @@ const shareHeader = document.querySelector('.js_shareHeader');
 const cardDecoration = document.querySelector('.card__decoration');
 const borderIcons = document.querySelectorAll('.js_icon_border');
 const imageIcons = document.querySelectorAll('.js_icon_image');
+const previeNameColor = document.querySelector('.js_previeNameColor');
+
+//Para el collapse de linkedin xD
+const shareCollapse = document.querySelector('.js_shareCollapse');
 
 function handleClickHeader(event) {
   event.currentTarget.nextElementSibling.classList.toggle('js_collapsed');
@@ -33,7 +37,7 @@ const data = {
   photo: '',
 };
 
-console.log(data);
+// console.log(data);
 
 for (const eachInput of allInputs) {
   eachInput.addEventListener('keyup', handleWriteInput);
@@ -63,17 +67,52 @@ function handleWriteInput(event) {
 
 const previewName = document.querySelector('.js_previewName');
 const previewJob = document.querySelector('.js_previewJob');
-const emailPreview = document.querySelector('.js_previewMail');
+const previewEmail = document.querySelector('.js_previewEmail');
+const previewPhone = document.querySelector('.js_previewPhone');
+const previewLinkedin = document.querySelector('.js_previewLinkedin');
+const previewGithub = document.querySelector('.js_previewGithub');
 
 function renderPreview() {
-  emailPreview.href = `mailto:${data.email}`;
+  if (data.name === '') {
+    previewName.innerHTML = 'Nombre Apellido';
+  } else {
+    previewName.innerHTML = data.name;
+  }
 
-  previewName.innerHTML = data.name;
-  previewJob.innerHTML = data.job;
+  if (data.job === '') {
+    previewJob.innerHTML = 'Front-end developer';
+  } else {
+    previewJob.innerHTML = data.job;
+  }
+
+  if (data.email === '') {
+    previewEmail.href = '';
+  } else {
+    previewEmail.href = `mailto:${data.email}`;
+  }
+
+  if (data.phone === '') {
+    previewPhone.href = '';
+  } else {
+    previewPhone.href = data.phone;
+  }
+
+  if (data.linkedin === '') {
+    previewLinkedin.href = '';
+  } else {
+    previewLinkedin.href = data.linkedin;
+  }
+
+  if (data.github === '') {
+    previewGithub.href = '';
+  } else {
+    previewGithub.href = data.github;
+  }
 }
 
-// Paleta de colores
+//Paleta de colores
 
+//Para lso iconos
 const allPalettes = document.querySelectorAll('.js_palette');
 
 for (const eachPalette of allPalettes) {
@@ -88,23 +127,33 @@ function handleClickPalette(ev) {
 
   if (paletteValue === 1) {
     cardDecoration.classList.add('card__decoration__palette1');
+    modificaNameAndLastName('namePreview__pallete1');
     modificaSocialIcons('social__icon__palette1');
     modificaIconsImages('icon_image__pallete1');
   } else if (paletteValue === 2) {
     cardDecoration.classList.add('card__decoration__palette2');
+    modificaNameAndLastName('namePreview__pallete2');
     modificaSocialIcons('social__icon__palette2');
     modificaIconsImages('icon_image__pallete2');
   } else if (paletteValue === 3) {
     cardDecoration.classList.add('card__decoration__palette3');
+    modificaNameAndLastName('namePreview__pallete3');
     modificaSocialIcons('social__icon__palette3');
     modificaIconsImages('icon_image__pallete3');
   }
 }
 //Clases que le dan color al div, es sólo un elemento
 function limpiaClases() {
+  //Para la barrita
   cardDecoration.classList.remove('card__decoration__palette1');
   cardDecoration.classList.remove('card__decoration__palette2');
   cardDecoration.classList.remove('card__decoration__palette3');
+
+  //Para eliminar las clases del nombrePreview
+  previeNameColor.classList.remove('namePreview__pallete1');
+  previeNameColor.classList.remove('namePreview__pallete2');
+  previeNameColor.classList.remove('namePreview__pallete3');
+
   //Borde de los iconos
   for (const icon of borderIcons) {
     icon.classList.remove('social__icon__palette1');
@@ -117,7 +166,6 @@ function limpiaClases() {
     image.classList.remove('icon_image__pallete2');
     image.classList.remove('icon_image__pallete3');
   }
-
 }
 
 function modificaSocialIcons(clase) {
@@ -127,10 +175,60 @@ function modificaSocialIcons(clase) {
   }
 }
 
-//Funcion para los colores de los iconos 
+//Funcion para los colores de los iconos
 
 function modificaIconsImages(clase) {
   for (const image of imageIcons) {
     image.classList.add(clase);
   }
 }
+
+//Funcion para sacar el boton de twitter
+
+const createBtn = document.querySelector('.js_create_button');
+//const fieldsetShare = document.querySelector('.js_fieldset__share');
+const cardURL = document.querySelector('.js_cardURL');
+
+// function handleClickCreate(event) {
+//   event.preventDefault();
+//   if (shareCollapse.classList.contains('js_collapsed')) {
+//     shareCollapse.classList.remove('js_collapsed');
+//   }
+//   console.log(cardURL);
+// }
+
+// createBtn.addEventListener('click', handleClickCreate);
+
+function modificaNameAndLastName(clase) {
+  previeNameColor.classList.add(clase);
+}
+
+//Reset
+
+const buttonReset = document.querySelector('.js_reset');
+
+function handleResetForm() {
+  //Inicializar el objeto data
+  data.palette = 1;
+  data.name = '';
+  data.job = '';
+  data.email = '';
+  data.phone = '';
+  data.linkedin = '';
+  data.github = '';
+  data.photo = '';
+
+  // Reset card preview
+  previewName.innerHTML = 'Nombre Apellido';
+  previewJob.innerHTML = 'Front-end developer';
+  previewEmail.href = '';
+  previewPhone.href = '';
+  previewLinkedin.href = '';
+  previewGithub.href = '';
+
+  for (const eachInput of allInputs) {
+    eachInput.value = '';
+  }
+}
+
+buttonReset.addEventListener('click', handleResetForm);

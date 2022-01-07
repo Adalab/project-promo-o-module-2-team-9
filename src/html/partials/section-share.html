@@ -1,4 +1,4 @@
-<fieldset class="fieldset__share ">
+<fieldset class="fieldset__share">
     <div class="container__share js_shareHeader">
         <div class="container__share--icon">
             <i class="fas fa-share-alt" alt="Share"></i>
@@ -14,12 +14,18 @@
             </button>
         </div>
 </fieldset>
-<fieldset class="fieldset__share js_collapsed">
+
+<fieldset class="fieldset__share js_collapsed js_shareCollapse ">
     <div class="container__created">
         <h4 class="container__created--title">La tarjeta ha sido creada:</h4>
-        <a href="" class="container__created--link"> https://awesome-profile-card.com?id=A458876555001</a>
-        <button type="submit" class="btn--twitter">
+        <!-- <a href="" class="container__created--link js_cardURL"></a>
+        <a href="#" class="btn--twitter js_btnTwitter" target="_blank"></a> -->
+        <a href="#" class="container__created--link js_cardURL js_twitterFetch "></a>
+        <button type="submit" class="btn--twitter js_btnTwitter">
             <i class="fab fa-twitter twitter-icon"></i>Compartir en twitter
         </button>
     </div>
 </fieldset>
+
+
+
