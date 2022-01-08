@@ -11,7 +11,7 @@ const borderIcons = document.querySelectorAll('.js_icon_border');
 const imageIcons = document.querySelectorAll('.js_icon_image');
 const previeNameColor = document.querySelector('.js_previeNameColor');
 
-//Para el collapse de linkedin xD
+//Para el collapse de Twitter xD
 const shareCollapse = document.querySelector('.js_shareCollapse');
 
 function handleClickHeader(event) {
@@ -225,6 +225,7 @@ function handleResetForm() {
   previewPhone.href = '';
   previewLinkedin.href = '';
   previewGithub.href = '';
+  createBtn.style.backgroundColor = '#e17334';
 
   for (const eachInput of allInputs) {
     eachInput.value = '';
