@@ -227,6 +227,8 @@ function handleResetForm() {
   previewPhone.href = '';
   previewLinkedin.href = '';
   previewGithub.href = '';
+  profileImage.style.backgroundImage = `url("./assets/images/jasonderulo_pic.png")`;
+  console.log(profileImage);
 
   for (const eachInput of allInputs) {
     eachInput.value = '';
