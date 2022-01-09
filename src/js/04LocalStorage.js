@@ -1,10 +1,9 @@
 function setlocalStorage() {
-    console.log(data);
-    localStorage.setItem("dataLocal", JSON.stringify(data));
+    localStorage.setItem('dataLocal', JSON.stringify(data));
 }
 
 function getLocalStorage() {
-    const getlocalData = localStorage.getItem("dataLocal");
+    const getlocalData = localStorage.getItem('dataLocal');
 
     if (getlocalData != null) {
         const localData = JSON.parse(getlocalData);
@@ -14,7 +13,6 @@ function getLocalStorage() {
         for (const att in localData) {
             data[att] = localData[att];
         }
-
         //Rellena el formulario
         for (const input of allInputs) {
             if (input.id === 'name') {
@@ -42,5 +40,3 @@ function getLocalStorage() {
 }
 
 getLocalStorage();
-
-
