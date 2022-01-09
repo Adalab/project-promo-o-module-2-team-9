@@ -63,6 +63,8 @@ function handleWriteInput(event) {
     data.photo = userValue;
   }
   renderPreview();
+
+  setlocalStorage();
 }
 
 const previewName = document.querySelector('.js_previewName');
