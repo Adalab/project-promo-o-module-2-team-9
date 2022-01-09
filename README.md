@@ -1,4 +1,4 @@
-![Las Mari's logo](./public/assets/images/maris_logo_readme.svg)
+![Las Mari's logo](./src/images/maris_logo_readme.svg)
 
 # Las Mari's Awesome Profile Cards
 
