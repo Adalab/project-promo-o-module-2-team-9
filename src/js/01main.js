@@ -124,6 +124,7 @@ function handleClickPalette(ev) {
 
   //Borro todas las clases porque no se cual tenia
   limpiaClases();
+  data.palette = paletteValue;
 
   if (paletteValue === 1) {
     cardDecoration.classList.add('card__decoration__palette1');
@@ -227,6 +228,8 @@ function handleResetForm() {
   previewGithub.href = '';
   createBtn.style.backgroundColor = '#e17334';
 
+  profileImage.style.backgroundImage = `url('./assets/images/jasonderulo_pic.png')`;
+  profilePreview.style.backgroundImage = '';
   for (const eachInput of allInputs) {
     eachInput.value = '';
   }
