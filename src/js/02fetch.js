@@ -13,6 +13,8 @@ const twitterFetch = document.querySelector('.js_twitterFetch');
 function handleCreateCard(event) {
   event.preventDefault();
 
+  console.log(data);
+
   fetch('https://awesome-profile-cards.herokuapp.com/card', {
     method: 'POST',
     body: JSON.stringify(data),
