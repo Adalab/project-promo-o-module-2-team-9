@@ -20,11 +20,13 @@
 
   <body>
     <header class="header__card">
-      <img
-        class="header__card--logo"
-        src="./assets/images/logo-awesome-profile-cards.svg"
-        alt="logo-awesome"
-      />
+      <a href="./index.html">
+        <img
+          class="header__card--logo"
+          src="./assets/images/logo-awesome-profile-cards.svg"
+          alt="logo-awesome"
+        />
+      </a>
     </header>
 
     <main class="card__main">
@@ -86,7 +88,7 @@
                     type="radio"
                     value="1"
                     name="palette"
-                    class="select__options--input js_palette"
+                    class="select__options--input js_palette js_palette_1"
                     checked
                   />
                   <div class="palette palette__cold1"></div>
@@ -238,10 +240,10 @@
                   <h4 class="container__created--title">La tarjeta ha sido creada:</h4>
                   <!-- <a href="" class="container__created--link js_cardURL"></a>
                   <a href="#" class="btn--twitter js_btnTwitter" target="_blank"></a> -->
-                  <a href="#" class="container__created--link js_cardURL js_twitterFetch "></a>
-                  <button type="submit" class="btn--twitter js_btnTwitter">
+                  <a href="#" class="container__created--link js_cardURL js_twitterFetch " target="_blank"></a>
+                  <a type="submit" class="btn--twitter js_btnTwitter js_collapsed" target="_blank">
                       <i class="fab fa-twitter twitter-icon"></i>Compartir en twitter
-                  </button>
+                  </a>
               </div>
           </fieldset>
 
@@ -254,7 +256,7 @@
     <footer class="footer">
       <h5 class="footerCopy">Awesome profile-cards &copy; 2021</h5>
 
-      <a href="https://adalab.es" target="_blank">
+      <a href="#" target="_blank">
         <img
           class="imageLogoAdalab"
           src="./assets/images/mari's_logo.svg"
