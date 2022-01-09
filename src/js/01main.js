@@ -209,6 +209,13 @@ function modificaNameAndLastName(clase) {
 const buttonReset = document.querySelector('.js_reset');
 
 function handleResetForm() {
+  // Set default palette again
+  limpiaClases();
+  const defaultPalette = document.querySelector('.js_palette_1');
+  if (defaultPalette.checked === false) {
+    defaultPalette.checked = true;
+  }
+
   //Inicializar el objeto data
   data.palette = 1;
   data.name = '';
