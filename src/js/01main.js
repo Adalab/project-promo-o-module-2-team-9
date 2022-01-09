@@ -11,7 +11,7 @@ const borderIcons = document.querySelectorAll('.js_icon_border');
 const imageIcons = document.querySelectorAll('.js_icon_image');
 const previeNameColor = document.querySelector('.js_previeNameColor');
 
-//Para el collapse de linkedin xD
+//Para el collapse de Twitter xD
 const shareCollapse = document.querySelector('.js_shareCollapse');
 
 function handleClickHeader(event) {
@@ -109,8 +109,6 @@ function renderPreview() {
     previewGithub.href = data.github;
   }
 }
-
-
 
 //Paleta de colores
 
@@ -211,6 +209,13 @@ function modificaNameAndLastName(clase) {
 const buttonReset = document.querySelector('.js_reset');
 
 function handleResetForm() {
+  // Set default palette again
+  limpiaClases();
+  const defaultPalette = document.querySelector('.js_palette_1');
+  if (defaultPalette.checked === false) {
+    defaultPalette.checked = true;
+  }
+
   //Inicializar el objeto data
   data.palette = 1;
   data.name = '';
@@ -229,6 +234,8 @@ function handleResetForm() {
   previewPhone.href = '';
   previewLinkedin.href = '';
   previewGithub.href = '';
+  createBtn.style.backgroundColor = '#e17334';
+
   profileImage.style.backgroundImage = `url('./assets/images/jasonderulo_pic.png')`;
   profilePreview.style.backgroundImage = '';
   for (const eachInput of allInputs) {
