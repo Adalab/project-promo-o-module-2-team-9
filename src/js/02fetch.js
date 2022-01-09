@@ -36,6 +36,7 @@ function handleCreateCard(event) {
       } else {
         twitterFetch.innerHTML =
           'Por favor, complete todos los campos e inténtelo de nuevo';
+        twitterFetch.href = '';
         twitterFetch.previousElementSibling.innerHTML =
           'No se ha podido crear la tarjeta';
       }
