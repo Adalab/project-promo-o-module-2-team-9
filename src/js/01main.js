@@ -229,7 +229,7 @@ function handleResetForm() {
   previewLinkedin.href = '';
   previewGithub.href = '';
   profileImage.style.backgroundImage = `url('./assets/images/jasonderulo_pic.png')`;
-
+  profilePreview.style.backgroundImage = '';
   for (const eachInput of allInputs) {
     eachInput.value = '';
   }
