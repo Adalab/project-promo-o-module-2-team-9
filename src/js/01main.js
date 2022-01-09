@@ -26,7 +26,7 @@ shareHeader.addEventListener('click', handleClickHeader);
 // Form
 const allInputs = document.querySelectorAll('.js_allInputs');
 
-const data = {
+let data = {
   palette: 1,
   name: '',
   job: '',
@@ -48,6 +48,7 @@ function handleWriteInput(event) {
   const userValue = event.currentTarget.value;
 
   if (userInput === 'name') {
+    console.log(data.name);
     data.name = userValue;
   } else if (userInput === 'job') {
     data.job = userValue;
@@ -62,7 +63,6 @@ function handleWriteInput(event) {
   } else if (userInput === 'photo') {
     data.photo = userValue;
   }
-  renderPreview();
 }
 
 const previewName = document.querySelector('.js_previewName');
