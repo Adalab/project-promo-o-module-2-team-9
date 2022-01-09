@@ -21,6 +21,7 @@ function handleCreateCard(event) {
     .then((response) => response.json())
     .then((data) => {
       dataCard = data;
+
       if (shareCollapse.classList.contains('js_collapsed')) {
         shareCollapse.classList.remove('js_collapsed');
         createButton.style.backgroundColor = 'gray';
@@ -30,6 +31,8 @@ function handleCreateCard(event) {
         twitterFetch.href = data.cardURL;
         btnTwitter.classList.remove('js_collapsed');
         btnTwitter.addEventListener('click', handleTweet);
+        twitterFetch.previousElementSibling.innerHTML =
+          'La tarjeta ha sido creada:';
       } else {
         twitterFetch.innerHTML =
           'Por favor, complete todos los campos e inténtelo de nuevo';
@@ -38,12 +41,10 @@ function handleCreateCard(event) {
       }
     });
 }
-
 createButton.addEventListener('click', handleCreateCard);
 
 // Function Twitter button
 
 function handleTweet() {
   btnTwitter.href = `https://twitter.com/intent/tweet?text=${dataCard.cardURL}`;
-  console.log(dataCard.cardURL);
 }
