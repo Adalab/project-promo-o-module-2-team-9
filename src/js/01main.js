@@ -222,6 +222,7 @@ function handleResetForm() {
   data.photo = '';
 
   // Reset card preview
+  data.palette = 1;
   previewName.innerHTML = 'Nombre Apellido';
   previewJob.innerHTML = 'Front-end developer';
   previewEmail.href = '';
