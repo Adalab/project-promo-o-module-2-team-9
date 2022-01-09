@@ -1,4 +1,5 @@
 function setlocalStorage() {
+    console.log(data);
     localStorage.setItem("dataLocal", JSON.stringify(data));
 }
 
@@ -32,6 +33,9 @@ function getLocalStorage() {
                 input.value = data.photo;
             }
         }
+
+        profileImage.style.backgroundImage = `url(${data.photo})`;
+        profilePreview.style.backgroundImage = `url(${data.photo})`;
 
         renderPreview();
     }

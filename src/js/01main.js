@@ -144,6 +144,7 @@ function handleClickPalette(ev) {
     modificaSocialIcons('social__icon__palette3');
     modificaIconsImages('icon_image__pallete3');
   }
+  setlocalStorage();
 }
 //Clases que le dan color al div, es sólo un elemento
 function limpiaClases() {
