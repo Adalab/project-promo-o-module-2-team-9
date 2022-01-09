@@ -1,4 +1,4 @@
-![Las Mari's logo](./public/assets/images/mari's_logo.svg)
+![Las Mari's logo](./public/assets/images/maris_logo_readme.svg)
 
 # Las Mari's Awesome Profile Cards
 
@@ -29,7 +29,7 @@ An image can also be added from the user's library. This was achieved by using a
 
 The last step is creating a card. Once all the mandatory fields are filled, a message will pop upon clicking the "Create card" button, which will deactivate and show a link to the created card and an option to share it on Twitter.
 
-> User Experience. Animation was added with CSS in order to achieve a better understanding and interaction with the program.
+> User Experience: animation was added with CSS in order to achieve a better understanding and interaction with the program.
 
 # Achievements
 
