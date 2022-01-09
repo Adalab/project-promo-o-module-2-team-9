@@ -128,24 +128,29 @@ function handleClickPalette(ev) {
   limpiaClases();
   data.palette = paletteValue;
 
-  if (paletteValue === 1) {
+  renderPalette();
+  setlocalStorage();
+}
+
+function renderPalette() {
+  if (data.palette === 1) {
     cardDecoration.classList.add('card__decoration__palette1');
     modificaNameAndLastName('namePreview__pallete1');
     modificaSocialIcons('social__icon__palette1');
     modificaIconsImages('icon_image__pallete1');
-  } else if (paletteValue === 2) {
+  } else if (data.palette === 2) {
     cardDecoration.classList.add('card__decoration__palette2');
     modificaNameAndLastName('namePreview__pallete2');
     modificaSocialIcons('social__icon__palette2');
     modificaIconsImages('icon_image__pallete2');
-  } else if (paletteValue === 3) {
+  } else if (data.palette === 3) {
     cardDecoration.classList.add('card__decoration__palette3');
     modificaNameAndLastName('namePreview__pallete3');
     modificaSocialIcons('social__icon__palette3');
     modificaIconsImages('icon_image__pallete3');
   }
-  setlocalStorage();
 }
+
 //Clases que le dan color al div, es sólo un elemento
 function limpiaClases() {
   //Para la barrita

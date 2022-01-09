@@ -32,10 +32,13 @@ function getLocalStorage() {
             }
         }
 
+        allPalettes[data.palette - 1].checked = true;
+
         profileImage.style.backgroundImage = `url(${data.photo})`;
         profilePreview.style.backgroundImage = `url(${data.photo})`;
 
         renderPreview();
+        renderPalette();
     }
 }
 
